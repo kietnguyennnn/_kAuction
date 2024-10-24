@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EC9E53D0-A65F-470A-A4F0-0697D5908E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{B7067764-FDCA-4CFA-9831-76F944E85C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{6E0B0ACB-3531-43CE-A21C-642E763FDEEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7067764-FDCA-4CFA-9831-76F944E85C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7067764-FDCA-4CFA-9831-76F944E85C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7067764-FDCA-4CFA-9831-76F944E85C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7067764-FDCA-4CFA-9831-76F944E85C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0B0ACB-3531-43CE-A21C-642E763FDEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0B0ACB-3531-43CE-A21C-642E763FDEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0B0ACB-3531-43CE-A21C-642E763FDEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0B0ACB-3531-43CE-A21C-642E763FDEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7067764-FDCA-4CFA-9831-76F944E85C28} = {EC9E53D0-A65F-470A-A4F0-0697D5908E6C}
+		{6E0B0ACB-3531-43CE-A21C-642E763FDEEA} = {EC9E53D0-A65F-470A-A4F0-0697D5908E6C}
+	EndGlobalSection
+EndGlobal

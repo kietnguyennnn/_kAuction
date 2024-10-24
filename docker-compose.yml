@@ -1,0 +1,21 @@
+services:
+  # đăng kí postgres container
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgrespw 
+    volumes:
+      - /var/lib/postgresql/data
+  # đăng kí mongo container
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root 
+      - MONGO_INITDB_ROOT_PASSWORD=mongopw
+    ports:
+      - 27017:27017
+    volumes:
+      - /data/db
+#không dùng khai báo volumes vì không nên lưu toàn bộ dữ liệu trong container
