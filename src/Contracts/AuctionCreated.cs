@@ -1,10 +1,10 @@
 using System;
 
-namespace AuctionService.DTOs;
+namespace Contracts;
 
-public class AuctionDto
+public class AuctionCreated
 {
-    public Guid Id { get; set; }
+     public Guid Id { get; set; }
     public int ReservePrice { get; set; }
     public string Seller { get; set; }
     public string Winner { get; set; }
@@ -20,5 +20,5 @@ public class AuctionDto
     public string Color { get; set; }
     public int Mileage { get; set; }
     public string ImageUrl { get; set; }
-    
+
 }

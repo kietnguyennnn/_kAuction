@@ -6,7 +6,7 @@ namespace AuctionService.Entities;
 [Table("Items")] //tên bảng trong database, ánh xạ tới bảng tên là items trong csdl 
 public class Item
 {
-       //tên bảng trong database
+    
     public Guid Id { get; set; }
     public string Make { get; set; }
     public string Model { get; set; }

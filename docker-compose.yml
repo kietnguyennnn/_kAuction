@@ -18,4 +18,9 @@ services:
       - 27017:27017
     volumes:
       - /data/db
+  rabiitmq:
+    image: rabbitmq:3-management-alpine 
+    ports:
+      - 5672:5672
+      - 15672:15672
 #không dùng khai báo volumes vì không nên lưu toàn bộ dữ liệu trong container

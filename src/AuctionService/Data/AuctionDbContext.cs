@@ -1,5 +1,6 @@
 using System;
 using AuctionService.Entities;
+using MassTransit;
 using Microsoft.EntityFrameworkCore; // DbContext
 namespace AuctionService.Data;
 
@@ -15,7 +16,14 @@ public class AuctionDbContext : DbContext
     //và nó sẽ tự động tạo ra cột AuctionId trong bảng Items để tham chiếu đến bảng Auction
     //lý do khai báo là auctions vì nó sẽ tạo ra bảng có tên là Auctions trong csdl
     
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
 
+        modelBuilder.AddInboxStateEntity();
+        modelBuilder.AddOutboxStateEntity();
+        modelBuilder.AddOutboxMessageEntity();
+    }
 
 
 

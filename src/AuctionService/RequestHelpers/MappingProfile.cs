@@ -2,6 +2,7 @@ using System;
 using AuctionService.DTOs;
 using AuctionService.Entities;
 using AutoMapper;
+using Contracts;
 
 namespace AuctionService.RequestHelpers;
 
@@ -19,5 +20,8 @@ public class MappingProfile : Profile
             //opt => opt.MapFrom(s => s): Đây là biểu thức lambda chỉ định cách ánh xạ từ đối tượng nguồn (CreateAuctionDto) sang thuộc tính Item của đối tượng đích (Auction).
             //opt.MapFrom(s => s): Phương thức MapFrom được sử dụng để chỉ định rằng thuộc tính Item của đối tượng đích (Auction) sẽ được ánh xạ từ toàn bộ đối tượng nguồn (CreateAuctionDto). Điều này có nghĩa là toàn bộ đối tượng CreateAuctionDto sẽ được ánh xạ sang thuộc tính Item của Auction.
         CreateMap<CreateAuctionDto, Item>();
+        CreateMap<AuctionDto, AuctionCreated>();
+        CreateMap<Auction, AuctionUpdated>().IncludeMembers(x => x.Item);
+        CreateMap<Item, AuctionUpdated>();
     }
 }
